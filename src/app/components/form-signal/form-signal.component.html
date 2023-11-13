@@ -1,0 +1,32 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" >
+  <label for="name">Name</label>
+  <input type="text" formControlName="name" placeholder="Enter Your Name">
+  <span style="color: red;" *ngIf="form.get('name')?.errors?.['required'] &&
+  form.get('name')?.touched">This field is required</span>
+  <label for="email">Email</label>
+  <input type="email" formControlName="email" placeholder="Enter Your Email">
+  <span style="color: red;" *ngIf="form.get('email')?.errors?.['required'] &&
+  form.get('email')?.touched">This field is required</span>
+  <span style="color: red;" *ngIf="form.get('email')?.errors?.['email'] &&
+  !form.get('email')?.errors?.['required'] && form.get('email')?.touched">Enter valid email</span>
+
+  <label for="password">password</label>
+  <input type="password" formControlName="password" placeholder="Enter Password">
+  <button type="submit">Submit</button>
+</form>
+
+
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let data of FormSignalService.formData()">
+    <td>{{data.name}}</td>
+    <td>{{data.email}}</td>
+  </tr>
+</tbody>
+</table>
