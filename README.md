@@ -1,5 +1,13 @@
 # FormSignal
 
+
+
+
+https://github.com/ameerbadushaht/Form_with_Signal/assets/84665215/3f8a1fd3-5754-4c83-ac48-47bf597c3fdf
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
 
 ## Development server
